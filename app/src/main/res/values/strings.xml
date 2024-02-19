@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">WeatherForecast</string>
+    <string name="weather">Weather</string>
+    <string name="forecast">Forecast</string>
+    <string name="get_start">Get Start</string>
+    <string name="my_map_api_key">AIzaSyDGQ8NwaNfLUDr6yolffyGTP7q07_uhykU</string>
+</resources>

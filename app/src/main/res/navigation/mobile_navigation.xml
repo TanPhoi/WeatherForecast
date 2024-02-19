@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/splashFragment">
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.ntphoi.weatherforecast.ui.splash.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_firstScreenFragment"
+            app:destination="@id/firstScreenFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.ntphoi.weatherforecast.ui.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_showWeatherFragment"
+            app:destination="@id/showWeatherFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/firstScreenFragment"
+        android:name="com.ntphoi.weatherforecast.ui.firstScreen.FirstScreenFragment"
+        android:label="FirstScreenFragment"
+        tools:layout="@layout/fragment_first_screen">
+        <action
+            android:id="@+id/action_firstScreenFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/fade_in_animation"
+            app:popUpTo="@id/firstScreenFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/showWeatherFragment"
+        android:name="com.ntphoi.weatherforecast.ui.showWeather.ShowWeatherFragment"
+        android:label="ShowWeatherFragment"
+        tools:layout="@layout/fragment_show_weather" />
+
+</navigation>
